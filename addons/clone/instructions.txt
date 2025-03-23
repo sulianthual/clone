@@ -1,28 +1,28 @@
 
 ## Clone: Godot plugin (2025), 4.4 and above
 
-Clone a PackedScene to a new folder and remove (most) dependencies to original. 
-The cloned PackedScene can be modified without modifying the original (akin to forking). 
-BEWARE not all dependencies are removed automatically. 
+Clone a PackedScene to a new folder and remove (most) dependencies to original.
+The cloned PackedScene can be modified without modifying the original (akin to forking).
+BEWARE not all dependencies are removed automatically.
 
 Follow these steps:
 1) Download Plugin, Enable in Project/Project Settings/Plugins
 2) Reload Current Project before any cloning (optional)
 3) Press the button "Clone" in bottom panel or drag-and-drop a .tscn into it.
 	This opens the cloning interface, which is in the Inspector.
-4) Choose Cloning Parameters in Cloning interface (leave to default for now). 
+4) Choose Cloning Parameters in Cloning interface (leave to default for now).
 5) Launch Cloning. The following happens:
 	- An output folder is created
 	- The packedscene .tscn is cloned to output folder
-	- All scripts .gd from original scene are cloned to output folder 
+	- All scripts .gd from original scene are cloned to output folder
 6) Check the differences between original and cloned scenes. With default parameters**:
 	- Groups are conserved
 	- Signals are conserved
 	- Attached scripts are replaced with cloned scripts
 	- @Exported variables are conserved, except if of type Script or Node
-	- Embedded packedscenes remain from the original (thus with dependencies). 
+	- Embedded packedscenes remain from the original (thus with dependencies).
 		To avoid this, use "Make Local" on them before cloning.
 	**: This is based on a few tests, not all cases may work that way.
 7) Carefully remove remaining dependencies manually, if any.
 8) If that doesnt work you can change the cloning options (to some partial cloning).
-9) You now have an independent scene you can work on without modifying the original one. 
+9) You now have an independent scene you can work on without modifying the original one.
