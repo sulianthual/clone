@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnl1kkordpgf5"]
+
+[ext_resource type="Script" uid="uid://d3eu3g6fqimtk" path="res://demo/main.gd" id="1_wrxtx"]
+[ext_resource type="Script" uid="uid://b6ahldnx2qwdr" path="res://demo/test_exported_script.gd" id="2_cqq71"]
+[ext_resource type="Script" uid="uid://ccf35vvkyulm" path="res://demo/test_child_1.gd" id="3_d70j4"]
+[ext_resource type="PackedScene" uid="uid://bii5ee003h02b" path="res://demo/test_child_2/test_child_2.tscn" id="4_7a6vi"]
+[ext_resource type="Texture2D" uid="uid://ddmqybb780x2l" path="res://game_icon.png" id="5_au1l0"]
+
+[node name="Main" type="Node" node_paths=PackedStringArray("a_node")]
+script = ExtResource("1_wrxtx")
+an_int = 2
+a_nodepath = NodePath("TestChild1")
+a_node = NodePath("TestChild2")
+a_script = ExtResource("2_cqq71")
+
+[node name="TestChild1" type="Node" parent="." groups=["group_bar", "group_foo"]]
+script = ExtResource("3_d70j4")
+
+[node name="TestChild2" parent="." instance=ExtResource("4_7a6vi")]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("5_au1l0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.5
+offset_top = -23.0
+offset_right = 88.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "a test scene (clone me, main.tscn, then compare)
+go read addons/clone/instructions.txt"
+
+[connection signal="a_signal" from="." to="TestChild1" method="_on_test_a_signal"]

@@ -24,6 +24,10 @@ window/size/viewport_height=460
 
 enabled=PackedStringArray("res://addons/clone/plugin.cfg")
 
+[global_group]
+
+group_bar=""
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

@@ -1,11 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://f1kwk404jkfq"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://f1kwk404jkfq"]
 
 [ext_resource type="Script" uid="uid://dfxkv6s6snc8w" path="res://addons/clone/cloning_launcher.gd" id="1_p2le5"]
+[ext_resource type="PackedScene" uid="uid://dnl1kkordpgf5" path="res://demo/main.tscn" id="1_q2qpl"]
 
 [resource]
 script = ExtResource("1_p2le5")
-output_folder = "res://test"
-output_prefix = "cp_"
+packedscene = ExtResource("1_q2qpl")
+output_folder = ""
+output_prefix = "clone_"
 clear_output = true
 copy_scripts = true
 assign_scripts = true

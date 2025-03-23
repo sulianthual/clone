@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://iax5apyh140o" path="res://addons/clone/clone_menu_button.gd" id="2_p0cn1"]
 
 [node name="CloneMenu" type="Control"]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,13 +13,18 @@ grow_vertical = 2
 
 [node name="Clone_Menu_Button" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.5
+offset_top = -15.5
+offset_right = 234.5
+offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Drop PackedScene here then launch Cloning from Inspector
-Last Cloning to res://test"
+text = "Drop PackedScene here then launch Cloning from Inspector"
 script = ExtResource("2_p0cn1")
 
 [node name="Timer" type="Timer" parent="Clone_Menu_Button"]

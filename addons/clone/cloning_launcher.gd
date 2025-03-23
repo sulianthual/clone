@@ -21,7 +21,7 @@ extends Resource
 ## If empty defaults to clone_test/ for input path ".../test.tscn".
 @export_dir var output_folder:  String=""
 ## Prefix added to all cloned filenames. 
-@export_dir var output_prefix:  String="cp_"
+@export_dir var output_prefix:  String="clone_"
 ## If true, clear output folder before duplication
 @export var clear_output: bool=true
 ## Copy scripts of original node and all descendants to output folder/scripts. 
