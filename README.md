@@ -1,9 +1,5 @@
-<!-- ![alt text](game_icon.png?raw=true "Screenshot") -->
+![alt text](game_icon.png?raw=true "Screenshot")
 
 <h4>clone</h4>
 
-sul (2025, Godot 4 or above)
-
-...
-
-Github reference: [link](https://github.com/sulianthual/clone)
+Clone Scenes in Godot Editor (4.4+), removes (almost) all dependencies. sul (2025), github: [link](https://github.com/sulianthual/clone)
